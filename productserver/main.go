@@ -43,5 +43,5 @@ func main() {
 	r.HandleFunc("/products", getProductsHandler)
 
 	// Bind to a port and pass our router in
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe("localhost:8000", r))
 }
