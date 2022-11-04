@@ -11,8 +11,9 @@ import (
 	calculator "github.com/ReyAdrian520/PivotTech/calculator_library"
 )
 
+//Enter equation with bufio pack
 func main() {
-	fmt.Println("CALCULATOR")
+	fmt.Println("Calculate your equation..")
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Print("ENTER CALCULATION (EX: 1+1): ")
@@ -72,7 +73,7 @@ func handleInput(str string) {
 	default:
 		fmt.Println(errors.New("error: unknown operator. please try again"))
 	}
-	fmt.Printf("RESULT: %d\n", result)
+	fmt.Printf("Answer: %d\n", result)
 }
 
 func checkContains(str string) (string, error) {
@@ -82,7 +83,7 @@ func checkContains(str string) (string, error) {
 		if strings.Contains(str, v) {
 			containsOperator = append(containsOperator, v)
 		}
-	}
+	} //checks to make sure only one operator is being used
 	switch len(containsOperator) {
 	case 0:
 		return "", errors.New("error: no operator. please try again")
