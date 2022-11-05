@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	calculator "github.com/ReyAdrian520/PivotTech/calculator_library"
+	"github.com/ReyAdrian520/PivotTech/calculator"
 )
 
 //Enter equation with bufio pack
